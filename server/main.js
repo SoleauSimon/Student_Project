@@ -1,11 +1,13 @@
 import { Meteor } from 'meteor/meteor';
 import Links from '/imports/api/links';
 
-function insertLink(name, lastName, github) {
+function insertLink(name, lastName, github, owner, username) {
   Links.insert({
     name,
     lastName,
     github,
+    owner: Meteor.userId(),
+    username: Meteor.user().username,
     createdAt: new Date()
   });
 }

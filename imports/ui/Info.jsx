@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
-import Links from '../api/links';
 
 class Info extends Component {
 
   handleDelete = (key) => {
     Links.remove({ _id: key });
   }
-  
-  handleUpdate = (key) => {
 
-    Links.update({ name, lastName, github });
+  handleUpdate = (key) => () => {
+    console.log(key, document.getElementById("name").innerText)
+    //Links.update( {_id: key}, {  name, lastName, github });
   }
 
   render() {
@@ -28,8 +27,9 @@ class Info extends Component {
     return (
       <li key={students._id}>
         <button onClick={() => this.handleDelete(students._id)}>delete</button>
-        <input type="checkbox" id="checkbox"value={students._id}/>
-        <div> {students.name}</div>
+        <button id="checkbox" onClick={this.handleUpdate(students._id)}>update</button>
+        {/* <input type="checkbox" id="checkbox" value={students._id}/> */}
+        <div id="name" > {students.name}</div>
         <div> {students.lastName} </div>
         <a href={students.github} target="_blank">{students.github}</a>
       </li>

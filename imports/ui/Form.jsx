@@ -26,30 +26,44 @@ export default class Form extends Component {
             Github: event.target.value
         });
     }
+    setValueUsername = (event) => {
+        this.setState({
+            Username: event.target.value
+        });
+    }
+    setValuePassword = (event) => {
+        this.setState({
+            Password: event.target.value
+        });
+    }
     handleSubmit = (event) => {
         event.preventDefault();
-        Links.insert({ name: this.state.Name, lastName: this.state.LastName, github: this.state.Github ,createdAt: new Date() });
+        Links.insert({
+            name: this.state.Name,
+            lastName: this.state.LastName,
+            github: this.state.Github,
+            createdAt: new Date()
+        })
+
     }
 
     render() {
         return (
             <Fragment>
-               <a href="/creatAccount">Go</a>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Name :
-                    <input onChange={this.setValueName} type="text"  />
+                    <input onChange={this.setValueName} type="text" />
                     </label>
                     <label>
                         LastName :
-                    <input onChange={this.setValueLink} type="text"  />
+                    <input onChange={this.setValueLink} type="text" />
                     </label>
                     <label>
                         Github :
-                    <input onChange={this.setValueGithub} type="text"  />
+                    <input onChange={this.setValueGithub} type="text" />
                     </label>
                     <button type="submit" value="Submit">Envoyer</button>
-                    {/* onSubmit={() => { this.handleUpdate(this.state.idCheckbox) }} */}
                 </form>
             </Fragment>
         )
