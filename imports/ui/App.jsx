@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Info from './Info.jsx';
 import Form from './Form.jsx';
 
-const App = () => (
-  <div>
-    <Info />
-    <Form />
-  </div>
-);
+class App extends Component {
+
+  render() {
+    return(
+        <div>
+          <Info />
+          <Form />
+        </div>
+    );
+  }
+};
 
 export default App;

@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from 'react'
+
 import Links from '/imports/api/links';
 
 export default class Form extends Component {
     state = {
         Name: '',
         LastName: '',
-        Github: ''
+        Github: '',
     }
 
     setValueName = (event) => {
@@ -29,9 +30,11 @@ export default class Form extends Component {
         event.preventDefault();
         Links.insert({ name: this.state.Name, lastName: this.state.LastName, github: this.state.Github ,createdAt: new Date() });
     }
+
     render() {
         return (
             <Fragment>
+               <a href="/creatAccount">Go</a>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Name :
@@ -46,6 +49,7 @@ export default class Form extends Component {
                     <input onChange={this.setValueGithub} type="text"  />
                     </label>
                     <button type="submit" value="Submit">Envoyer</button>
+                    {/* onSubmit={() => { this.handleUpdate(this.state.idCheckbox) }} */}
                 </form>
             </Fragment>
         )

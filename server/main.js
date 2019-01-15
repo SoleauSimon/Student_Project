@@ -2,11 +2,20 @@ import { Meteor } from 'meteor/meteor';
 import Links from '/imports/api/links';
 
 function insertLink(name, lastName, github) {
-  Links.insert({ name, lastName, github, createdAt: new Date() });
+  Links.insert({
+    name,
+    lastName,
+    github,
+    createdAt: new Date()
+  });
 }
 
 function removeLink(_id) {
   Links.remove({ _id });
+}
+
+function updateLink(_id) {
+  Links.update({ name, lastName, github })
 }
 
 Meteor.startup(() => {

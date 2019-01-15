@@ -7,12 +7,16 @@ class Info extends Component {
   handleDelete = (key) => {
     Links.remove({ _id: key });
   }
+  
+  handleUpdate = (key) => {
+
+    Links.update({ name, lastName, github });
+  }
 
   render() {
     const students = this.props.students.map(
       students => this.makeLink(students)
     );
-  
     return (
       <div>
         <ul>{ students }</ul>
@@ -23,7 +27,8 @@ class Info extends Component {
   makeLink(students) {
     return (
       <li key={students._id}>
-        <button key={students._id} onClick={() => this.handleDelete(students._id)}>delete</button>
+        <button onClick={() => this.handleDelete(students._id)}>delete</button>
+        <input type="checkbox" id="checkbox"value={students._id}/>
         <div> {students.name}</div>
         <div> {students.lastName} </div>
         <a href={students.github} target="_blank">{students.github}</a>
