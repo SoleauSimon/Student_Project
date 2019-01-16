@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import InfosStudent from './infosStudent';
+import Form from './Form';
 
 class Info extends Component {
 
@@ -10,12 +11,14 @@ class Info extends Component {
       student => <InfosStudent key={student._id} student={student} />
     );
     return (
-      <div>
-        <ul>{students}</ul>
-      </div>
+      <Fragment>
+        <Form/>
+        <div>
+          <ul>{students}</ul>
+        </div>
+      </Fragment>
     );
   }
-
 
 }
 // Récupère le students dans la base de donnée 
