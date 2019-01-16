@@ -9,7 +9,12 @@ class Info extends Component {
 
   handleUpdate = (key) => () => {
     console.log(key, document.getElementById("name").innerText)
-    //Links.update( {_id: key}, {  name, lastName, github });
+    let name = document.getElementById("name").innerText;
+    let lastName = document.getElementById("lastName").innerText;
+    let github = document.getElementById("github").innerText;
+    console.log(name, lastName, github);
+    
+    //Links.update( {_id: key}, { name, lastName, github });
   }
 
   render() {
@@ -29,9 +34,9 @@ class Info extends Component {
         <button onClick={() => this.handleDelete(students._id)}>delete</button>
         <button id="checkbox" onClick={this.handleUpdate(students._id)}>update</button>
         {/* <input type="checkbox" id="checkbox" value={students._id}/> */}
-        <div id="name" > {students.name}</div>
-        <div> {students.lastName} </div>
-        <a href={students.github} target="_blank">{students.github}</a>
+        <div id="name"> {students.name}</div>
+        <div id="lastName"> {students.lastName} </div>
+        <a id="github" href={students.github} target="_blank">{students.github}</a>
       </li>
     );
   }
