@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
-
 import Links from '/imports/api/links';
+
+// const keys = ['Name', 'LastName', 'Github']
 
 export default class Form extends Component {
     state = {
@@ -8,34 +9,14 @@ export default class Form extends Component {
         LastName: '',
         Github: '',
     }
-
-    setValueName = (event) => {
+    setValue = (event, key) => {
         this.setState({
-            Name: event.target.value
-        });
+            [key]: event.target.value
+        })
+        // obj.a //1
+        // obj['a'] //1
     }
 
-    setValueLink = (event) => {
-        this.setState({
-            LastName: event.target.value
-        });
-    }
-
-    setValueGithub = (event) => {
-        this.setState({
-            Github: event.target.value
-        });
-    }
-    setValueUsername = (event) => {
-        this.setState({
-            Username: event.target.value
-        });
-    }
-    setValuePassword = (event) => {
-        this.setState({
-            Password: event.target.value
-        });
-    }
     handleSubmit = (event) => {
         event.preventDefault();
         Links.insert({
@@ -51,18 +32,12 @@ export default class Form extends Component {
         return (
             <Fragment>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Name :
-                    <input onChange={this.setValueName} type="text" />
-                    </label>
-                    <label>
-                        LastName :
-                    <input onChange={this.setValueLink} type="text" />
-                    </label>
-                    <label>
-                        Github :
-                    <input onChange={this.setValueGithub} type="text" />
-                    </label>
+                    {['Name', 'LastName', 'Github'].map(key => (
+                        <label key={key} >
+                            {key} :
+                            <input onChange={(event) => this.setValue(event, key)} value={this.state[key]} type="text" />
+                        </label>
+                    ))}
                     <button type="submit" value="Submit">Envoyer</button>
                 </form>
             </Fragment>

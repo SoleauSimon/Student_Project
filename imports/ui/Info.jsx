@@ -1,45 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
+import InfosStudent from './infosStudent';
+import Form from './Form';
 
 class Info extends Component {
 
-  handleDelete = (key) => {
-    Links.remove({ _id: key });
-  }
-
-  handleUpdate = (key) => () => {
-    console.log(key, document.getElementById("name").innerText)
-    let name = document.getElementById("name").innerText;
-    let lastName = document.getElementById("lastName").innerText;
-    let github = document.getElementById("github").innerText;
-    console.log(name, lastName, github);
-    
-    //Links.update( {_id: key}, { name, lastName, github });
-  }
-
   render() {
     const students = this.props.students.map(
-      students => this.makeLink(students)
+      student => <InfosStudent key={student._id} student={student} />
     );
     return (
-      <div>
-        <ul>{ students }</ul>
-      </div>
+      <Fragment>
+        <Form/>
+        <div>
+          <ul>{students}</ul>
+        </div>
+      </Fragment>
     );
   }
 
-  makeLink(students) {
-    return (
-      <li key={students._id}>
-        <button onClick={() => this.handleDelete(students._id)}>delete</button>
-        <button id="checkbox" onClick={this.handleUpdate(students._id)}>update</button>
-        {/* <input type="checkbox" id="checkbox" value={students._id}/> */}
-        <div id="name"> {students.name}</div>
-        <div id="lastName"> {students.lastName} </div>
-        <a id="github" href={students.github} target="_blank">{students.github}</a>
-      </li>
-    );
-  }
 }
 
 export default InfoContainer = withTracker(() => {
