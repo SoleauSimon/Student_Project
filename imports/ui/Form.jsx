@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import { Link } from 'react-dom'
-
 import Links from '/imports/api/links';
 
 // const keys = ['Name', 'LastName', 'Github']
@@ -15,7 +13,6 @@ export default class Form extends Component {
         this.setState({
             [key]: event.target.value
         })
-
         // obj.a //1
         // obj['a'] //1
     }

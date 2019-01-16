@@ -18,7 +18,7 @@ class infosStudent extends Component {
     } = event.target
 
     Links.update({ _id: key }, { name, lastName, github });
-    
+
     this.setState({
       isUpdating: false
     })
@@ -47,8 +47,6 @@ class infosStudent extends Component {
               <a href={student.github} target="_blank">{student.github}</a>
             </Fragment>
           )}
-        {/* <input type="checkbox" id="checkbox" value={student._id}/> */}
-
       </li>
     );
   }
