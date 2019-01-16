@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Info from './Info.jsx';
-import Form from './Form.jsx';
+import Info from './StudentsInfos/Info.jsx';
+import Profile from './Profile/Profile'
 
 class App extends Component {
   render() {
@@ -12,7 +12,7 @@ class App extends Component {
           <Router>
             <Fragment>
               <Route exact path="/" component={Info}/>
-              {/* <Route path="/profile" component={}/> */}
+              <Route path="/profile" component={Profile}/>
             </Fragment>
           </Router>
         </div>
