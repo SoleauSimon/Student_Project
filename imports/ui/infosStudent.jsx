@@ -4,10 +4,13 @@ class infosStudent extends Component {
   state = {
     isUpdating: false
   }
+
+// Remove l'id dans la bdd mongo db
   handleDelete = (key) => {
     Links.remove({ _id: key });
   }
 
+// Update dans la bdd de mongo db
   handleUpdate = (key) => (event) => {
     event.preventDefault()
 
@@ -17,7 +20,7 @@ class infosStudent extends Component {
       github: { value: github }
     } = event.target
 
-    Links.update({ _id: key }, { name, lastName, github });
+    Links.update({ _id: key }, { name: name, lastName, github });
 
     this.setState({
       isUpdating: false
@@ -27,6 +30,7 @@ class infosStudent extends Component {
   render() {
     const { student } = this.props
     const { isUpdating } = this.state
+
     return (
       <li key={student._id}>
         <button onClick={() => this.handleDelete(student._id)}>delete</button>

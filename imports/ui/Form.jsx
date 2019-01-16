@@ -9,6 +9,7 @@ export default class Form extends Component {
         LastName: '',
         Github: '',
     }
+    // Récupère la value des input dynamiquement
     setValue = (event, key) => {
         this.setState({
             [key]: event.target.value
@@ -17,6 +18,7 @@ export default class Form extends Component {
         // obj['a'] //1
     }
 
+    // Au submit, envoit les données des input dans la bdd mongo db
     handleSubmit = (event) => {
         event.preventDefault();
         Links.insert({
@@ -25,7 +27,12 @@ export default class Form extends Component {
             github: this.state.Github,
             createdAt: new Date()
         })
-
+        // Remet le champs des input à vide
+        this.setState({
+            Name: '',
+            LastName: '',
+            Github: '',
+        })
     }
 
     render() {
