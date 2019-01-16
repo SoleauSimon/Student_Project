@@ -25,8 +25,13 @@ export default class Form extends Component {
             github: this.state.Github,
             createdAt: new Date()
         })
-
+        this.setState({
+            Name: '',
+            LastName: '',
+            Github: '',
+        })
     }
+
 
     render() {
         return (
