@@ -7,8 +7,6 @@ class App extends Component {
   render() {
     return(
         <div className="App">
-          {/* <Info />
-          <Form /> */}
           <Router>
             <Fragment>
               <Route exact path="/" component={Info}/>
