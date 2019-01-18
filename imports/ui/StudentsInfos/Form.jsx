@@ -43,7 +43,7 @@ export default class Form extends Component {
                     {['Name', 'LastName', 'Github'].map(key => (
                         <label key={key} >
                             {key} :
-                            <input onChange={(event) => this.setValue(event, key)} value={this.state[key]} type="text" />
+                            <input onChange={(event) => this.setValue(event, key)} value={this.state[key]} type="text" name={key} required/>
                         </label>
                     ))}
                     <button type="submit" value="Submit">Envoyer</button>

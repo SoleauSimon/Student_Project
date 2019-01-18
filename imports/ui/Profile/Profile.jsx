@@ -1,11 +1,26 @@
-import React, {Component, Fragment} from 'react';
+import React, { Component } from 'react';
+import { Meteor } from 'meteor/meteor';
 
 class Profile extends Component {
+   
+    isLogged = () =>
+    {
+        return this.props.user
+    }
+
+
     render() {
-        return(
-            <div>Profile</div>
+        return (
+            <div>{`Profile ${ this.isLogged() && this.props.user.username }` }</div>
         )
     }
 }
 
-export default Profile
+
+import { withTracker } from 'meteor/react-meteor-data';
+
+export default withTracker(() => {
+    return {
+      user: Meteor.user(),
+    };
+  })(Profile );
