@@ -1,7 +1,15 @@
 import React, {Component, Fragment} from 'react';
+import { Meteor } from 'meteor/meteor';
 import './profile.css';
 
 class Profile extends Component {
+   
+    isLogged = () =>
+    {
+        return this.props.user
+    }
+
+
     render() {
         return(
         
@@ -20,7 +28,7 @@ class Profile extends Component {
                                 <div className="YOUR_PROFILE">VOTRE PROFIL</div>
                             </div>
                             <div className="dataBlock">
-                                <h3 className="dataBlockTitle">NOM</h3>
+                                <h3 className="dataBlockTitle">{`Profile ${ this.isLogged() && this.props.user.username }` }</h3>
                                 <div className="dataBlockContent">lorem10</div>
                                 <h3 className="dataBlockTitle">Prénom</h3>
                                 <div className="dataBlockContent">lorem10</div>
@@ -37,4 +45,11 @@ class Profile extends Component {
     }
 }
 
-export default Profile
+
+import { withTracker } from 'meteor/react-meteor-data';
+
+export default withTracker(() => {
+    return {
+      user: Meteor.user(),
+    };
+  })(Profile );

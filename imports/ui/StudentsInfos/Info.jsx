@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import InfosStudent from './infosStudent';
+import { Link } from 'react-router-dom';
 import Form from './Form';
 
 class Info extends Component {
@@ -12,6 +13,7 @@ class Info extends Component {
     );
     return (
       <Fragment>
+        <Link to="/profile"> Profile </Link>
         <Form/>
         <div>
           <ul>{students}</ul>
