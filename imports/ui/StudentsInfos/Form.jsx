@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import Links from '/imports/api/links';
+import '../style.css';
+import '../reset.css';
 
 // const keys = ['Name', 'LastName', 'Github']
 
@@ -29,8 +31,8 @@ export default class Form extends Component {
         })
         // Remet le champs des input à vide
         this.setState({
-            Name: '',
-            LastName: '',
+            Name : '',
+            LastName : '',
             Github: '',
         })
     }
@@ -39,15 +41,21 @@ export default class Form extends Component {
     render() {
         return (
             <Fragment>
-                <form onSubmit={this.handleSubmit}>
+                <div className="container">
+                <section className="contentform">
+                <h1 className="title">HETIC</h1>
+                <h2 className="subtitle">La liste d'élèves</h2>
+                <form className="formulaire" onSubmit={this.handleSubmit}>
                     {['Name', 'LastName', 'Github'].map(key => (
                         <label key={key} >
                             {key} :
-                            <input onChange={(event) => this.setValue(event, key)} value={this.state[key]} type="text" name={key} required/>
+                            <input className="info" onChange={(event) => this.setValue(event, key)} value={this.state[key]} type="text" />
                         </label>
                     ))}
-                    <button type="submit" value="Submit">Envoyer</button>
+                    <button className="btnsend" type="submit" value="Submit">Envoyer</button>
                 </form>
+                </section>
+                </div>
             </Fragment>
         )
     }

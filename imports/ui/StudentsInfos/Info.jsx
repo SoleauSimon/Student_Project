@@ -14,10 +14,14 @@ class Info extends Component {
     return (
       <Fragment>
         <Link to="/profile"> Profile </Link>
-        <Form/>
+        <div style={{display:'flex', justifyContent:'space-between'}}>
+          <div>
+            <img src="https://image.noelshack.com/fichiers/2019/03/5/1547823479-imgmanga.png" style={{backgroundImage: 'cover', height:'100vh'}} />
+          </div>
+          <div className="contentstudents">
+            <ul>{students}</ul>
+          </div>
         <div>
-          <ul>{students}</ul>
-        </div>
       </Fragment>
     );
   }

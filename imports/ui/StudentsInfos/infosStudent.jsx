@@ -32,8 +32,8 @@ class infosStudent extends Component {
     const { isUpdating } = this.state
 
     return (
-      <li key={student._id}>
-        <button onClick={() => this.handleDelete(student._id)}>delete</button>
+      <li className="contentprofile" key={student._id}>
+        <button className="btndelete" onClick={() => this.handleDelete(student._id)}>Delete</button>
         {isUpdating ? (
           <Fragment>
             <form onSubmit={this.handleUpdate(student._id)}>
@@ -45,7 +45,7 @@ class infosStudent extends Component {
           </Fragment>
         ) : (
             <Fragment>
-              <button id="checkbox" onClick={() => this.setState({ isUpdating: true })}>update</button>
+              <button className="btnupdate" id="checkbox" onClick={() => this.setState({ isUpdating: true })}>Update</button>
               <div id="name" > {student.name}</div>
               <div> {student.lastName} </div>
               <a href={student.github} target="_blank">{student.github}</a>

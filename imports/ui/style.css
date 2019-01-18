@@ -1,0 +1,106 @@
+
+@font-face {
+    font-family: 'Glasgow';
+    src: url('Glasgow-Regular.eot'); /* IE9 Compat Modes */
+    src: url('Glasgow-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Glasgow-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('Glasgow-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('Glasgow-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('Glasgow-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+
+body{
+    background-color: #f6eded;
+    margin: none;
+    font-family:'Glasgow';
+    color: #cb4f4f;
+}
+
+
+.btnsend{
+    background-color: #cb4f4f;
+    margin-left: 30px;
+    border: none;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    font-family: 'Glasgow';
+}
+
+.info{
+    border: none;
+    background-color: #f6eded;
+    border-bottom: 1px solid #cb4f4f;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.formulaire {
+    width: 550px;
+    color: #cb4f4f;
+    font-family: 'Glasgow';
+    font-weight: 600;
+    margin-top: 20px;
+
+}
+.title {
+    font-family: 'Glasgow';
+    letter-spacing: 10pt;
+    color: #cb4f4f;
+    font-size: 50px;
+    margin-top: 40px;
+    
+}
+.subtitle {
+    font-family: 'Glasgow';
+    letter-spacing: 5pt;
+    color: #cb4f4f;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.contentform {
+    display: block;
+    text-align: center;
+    position: fixed;
+}
+
+.contentprofile {
+    background-color: rgba(255, 255, 255, .5);
+    width: 500px;
+    padding: 5px 15px 5px 15px;
+}
+
+.contentform {
+    position: absolute;
+    right: 30px;
+}
+
+.btndelete {
+    background-color: #2f2f2f;
+    border: none;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    font-family: 'Glasgow';
+}
+.btnupdate {
+    background-color: #f1a963;
+    margin-left: 5px;
+    border: none;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    font-family: 'Glasgow';
+}
+
+.contentstudents {
+    margin-top:220px;
+    width: 600px;
+    height: 310px;
+    overflow-y: scroll;
+    margin-right: 30px;
+}
+
+a:hover{
+    text-decoration: none;
+    color:black;
+}
