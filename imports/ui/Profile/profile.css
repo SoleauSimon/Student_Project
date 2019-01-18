@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Glasgow';
+    src: url('Glasgow-Regular.eot');
+    /* IE9 Compat Modes */
+    src: url('Glasgow-Regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('Glasgow-Regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('Glasgow-Regular.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('Glasgow-Regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('Glasgow-Regular.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+body {
+    background-color: #f6eded;
+
+}
+.backHome {
+    color: #cb4f4f;
+    text-decoration: none;
+    font-family: "Glasgow";
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+section {
+    display: flex;
+}
+.mainBlock {
+    width: 989px;
+    height: 618px;
+    background-color: #cb4f4f;
+    margin: auto;
+    display: flex;
+    
+}
+.blockImg {
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+.imgContainer {
+    background-color: white;
+    width: 413p;
+    height: 597px;
+    margin: auto;
+
+}
+
+.contentBlock {
+    color:#f6eded;
+    font-family: 'Glasgow';
+    margin: auto;
+    text-align: center;
+}
+
+.titleBlock {
+    background-color: #cb4f4f;
+    width: 100%;
+    margin-bottom: 40px;
+
+}
+
+.HETIC {
+    font-size: 60px;
+    letter-spacing: 10px;
+}
+.YOUR_PROFILE {
+    letter-spacing: 3pt;
+    margin: 0;
+}
+
+.dataBlock {
+    background-color: #f6eded;
+    /* width: 325px; */
+    /* height: 371px; */
+    color: #cb4f4f;
+    text-align: center;
+    padding: 5px 15px 10px 15px;
+    
+}
+
+
+
