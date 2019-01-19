@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Meteor } from 'meteor/meteor';
+import AccountLogic from '../Connexion/AccountLogic'
 import './profile.css';
 
 class Profile extends Component {
@@ -11,7 +12,7 @@ class Profile extends Component {
         const { user } = this.props
         return (
             <Fragment>
-                <a className="backHome" href="/info">Revenir sur la page des étudiants</a>
+                <a className="backHome" href="/">Revenir sur la page des étudiants</a>
                 <section>
                     <div className="mainBlock">
                         <div className="blockImg">
@@ -40,7 +41,7 @@ class Profile extends Component {
                                     <div>
                                             Vous n'êtes pas connecté, connectez vous ici :
                                     </div>
-                                    <a style={{ color:'white' }}  href="/" >Me connecter</a>
+                                    <AccountLogic />
                                 </Fragment>
                                 )}
                         </div>

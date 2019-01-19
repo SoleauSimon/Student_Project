@@ -11,8 +11,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <Fragment>
-            <Route exact path="/" component={Account} />
-            <Route path="/info" component={Info} />
+            <Route exact path="/" component={Info} />
             <Route path="/profile" component={Profile} />
           </Fragment>
         </Router>

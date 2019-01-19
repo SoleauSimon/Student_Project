@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import InfosStudent from './infosStudent';
 import { Link } from 'react-router-dom';
+import AccountLogic from '../Connexion/AccountLogic'
 import Form from './Form';
 
 import './Info.css'
@@ -23,9 +24,9 @@ class Info extends Component {
             </div>
             <div style={{ flex: 1 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Link style={{ borderRadius: '0% 60% 50% 49%', textTransform: 'uppercase', backgroundColor: '#cb4f4f', textDecoration: 'none', color: 'white', padding: '20px 20px 0px 0px' }} to='/'>
-                  <div style={{ marginLeft: 10, marginTop: 10 }} >Connexion</div>
-                </Link>
+                <div style={{ borderRadius: '0% 60% 50% 49%', textTransform: 'uppercase', backgroundColor: '#cb4f4f', textDecoration: 'none', color: 'white', padding: '20px 20px 0px 0px' }}>
+                  <AccountLogic />
+                </div>
                 <Link style={{ borderRadius: '10% 0% 0% 70%', textTransform: 'uppercase', backgroundColor: '#cb4f4f', textDecoration: 'none', color: 'white', padding: '0 0 20px 20px' }} to="/profile">
                   <div style={{ marginBottom: 10, marginTop: 10, marginRight: 10 }}>Votre</div>
                   <div style={{ marginTop: 10, marginRight: 10 }}>Profile</div>
@@ -46,8 +47,8 @@ class Info extends Component {
                     </Fragment>
                   ) : (
                       <div>
-                        <div>
-                          Vous n'êtes pas connecté, connectez vous ici : <a href="/" >Me connecter</a>
+                        <div style={{textAlign: 'center'}}>
+                          Vous n'êtes pas connecté.
                         </div>
                       </div>
                     )}
