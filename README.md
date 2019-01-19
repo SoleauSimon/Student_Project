@@ -1,13 +1,9 @@
 Intervenants : 
 
 Christella Levieux
-
 Mehdi Verfaillie
-
 Anthony Thuillez
-
 Marie Te
-
 Simon Soléau
 
 ## Student_Project
@@ -16,7 +12,9 @@ Projet React / Météor :
 Gestion d'élèves avec enregistrement de leurs liens Github / Nom et Prénom sous forme de CRUD en météor,
 Création d'un espace profile météor
 
-![Liste d'élèves](https://i.gyazo.com/2b79ae18409ae27bfacc259f585368e1.jpg "Liste d'élèves")
+Screenshot de l'application avec le nom des contributeurs
+
+![Liste d'élèves](https://i.gyazo.com/1bdf002fa386a58500514c7e694b6b49.jpg "Liste d'élèves")
 
 ![Compte User](https://i.gyazo.com/ee1f68030a049a08b5b45ab406ad2909.png "Compte User")
 
