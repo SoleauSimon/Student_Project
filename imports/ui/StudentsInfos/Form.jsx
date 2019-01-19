@@ -31,8 +31,8 @@ export default class Form extends Component {
         })
         // Remet le champs des input à vide
         this.setState({
-            Name : '',
-            LastName : '',
+            Name: '',
+            LastName: '',
             Github: '',
         })
     }
@@ -41,20 +41,20 @@ export default class Form extends Component {
     render() {
         return (
             <Fragment>
-                <div className="container">
-                <section className="contentform">
-                <h1 className="title">HETIC</h1>
-                <h2 className="subtitle">La liste d'élèves</h2>
-                <form className="formulaire" onSubmit={this.handleSubmit}>
-                    {['Name', 'LastName', 'Github'].map(key => (
-                        <label key={key} >
-                            {key} :
+                <div>
+                    <div style={{ textAlign: 'center', marginBottom: 40 }}>
+                        <h1 style={{ fontSize: 53, letterSpacing: 11, textTransform:'uppercase', lineHeight: 0.8, marginBottom: 10}}>HETIC</h1>
+                        <h2 style={{ fontSize: 20, letterSpacing: 6, textTransform:'uppercase' }}>La liste d'élèves</h2>
+                    </div>
+                    <form style={{ marginBottom: 40 }} onSubmit={this.handleSubmit}>
+                        {['Name', 'LastName', 'Github'].map(key => (
+                            <label key={key} >
+                                {key} :
                             <input className="info" onChange={(event) => this.setValue(event, key)} value={this.state[key]} type="text" />
-                        </label>
-                    ))}
-                    <button className="btnsend" type="submit" value="Submit">Envoyer</button>
-                </form>
-                </section>
+                            </label>
+                        ))}
+                        <button className="btnsend" type="submit" value="Submit">Envoyer</button>
+                    </form>
                 </div>
             </Fragment>
         )

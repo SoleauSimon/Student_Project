@@ -4,6 +4,8 @@ import InfosStudent from './infosStudent';
 import { Link } from 'react-router-dom';
 import Form from './Form';
 
+import './Info.css'
+
 class Info extends Component {
 
   render() {
@@ -13,15 +15,24 @@ class Info extends Component {
     );
     return (
       <Fragment>
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <div>
-            <img src="https://image.noelshack.com/fichiers/2019/03/5/1547823479-imgmanga.png" style={{ backgroundImage: 'cover', height: '100vh' }} />
-          </div>
-          <Form />
-
-          <div className="contentstudents">
-            <Link to="/profile"> Profile </Link>
-            <ul>{students}</ul>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div style={{ display: 'flex' }}>
+            <div className="infoContainerImg" style={{ flex: '1' }} >
+              {/* <img src="https://image.noelshack.com/fichiers/2019/03/5/1547823479-imgmanga.png" style={{  }} /> */}
+            </div>
+            <div style={{ flex: 1 }}>
+              <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <Link to="/profile"> Profile </Link>
+              </div>
+              <div style={{ display: 'flex', padding: 60 }}>
+                <div style={{ width: '100%' }}>
+                  <Form />
+                  <div >
+                    <ul style={{ overflow: 'scroll', maxHeight: '570px' }}>{students}</ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Fragment>

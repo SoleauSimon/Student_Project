@@ -5,12 +5,12 @@ class infosStudent extends Component {
     isUpdating: false
   }
 
-// Remove l'id dans la bdd mongo db
+  // Remove l'id dans la bdd mongo db
   handleDelete = (key) => {
     Links.remove({ _id: key });
   }
 
-// Update dans la bdd de mongo db
+  // Update dans la bdd de mongo db
   handleUpdate = (key) => (event) => {
     event.preventDefault()
 
@@ -32,24 +32,31 @@ class infosStudent extends Component {
     const { isUpdating } = this.state
 
     return (
-      <li className="contentprofile" key={student._id}>
-        <button className="btndelete" onClick={() => this.handleDelete(student._id)}>Delete</button>
+      <li style={{ backgroundColor: 'white', marginBottom: 40 }} key={student._id}>
         {isUpdating ? (
-          <Fragment>
+          <div style={{ display: 'flex' }}>
+            <div>
+              <button className="btndelete" onClick={() => this.handleDelete(student._id)}>Delete</button>
+            </div>
             <form onSubmit={this.handleUpdate(student._id)}>
               <input name="name" defaultValue={student.name} />
               <input name="lastName" defaultValue={student.lastName} />
               <input name="github" defaultValue={student.github} />
               <input type="submit" value="Submit" id="checkbox" />
             </form>
-          </Fragment>
+          </div>
         ) : (
-            <Fragment>
-              <button className="btnupdate" id="checkbox" onClick={() => this.setState({ isUpdating: true })}>Update</button>
-              <div id="name" > {student.name}</div>
-              <div> {student.lastName} </div>
-              <a href={student.github} target="_blank">{student.github}</a>
-            </Fragment>
+            <div style={{ display: 'flex', padding: 20, justifyContent: 'space-between' }}>
+              <div>
+                <div id="name" > {student.name}</div>
+                <div> {student.lastName} </div>
+                <a href={student.github} target="_blank">{student.github}</a>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column' }} >
+                <button className="btndelete" onClick={() => this.handleDelete(student._id)}>Delete</button>
+                <button className="btnupdate" id="checkbox" onClick={() => this.setState({ isUpdating: true })}>Update</button>
+              </div>
+            </div>
           )}
       </li>
     );
