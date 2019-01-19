@@ -47,10 +47,12 @@ class Info extends Component {
                     </Fragment>
                   ) : (
                       <div>
-                        <div style={{textAlign: 'center', marginBottom: 30}}>
+                        <div style={{ textAlign: 'center', marginBottom: 30 }}>
                           Vous n'êtes pas connecté.
                         </div>
-                        <img src="https://media1.tenor.com/images/19939c42a6754681fc9ee1dc5ebd9658/tenor.gif?itemid=5018411"></img>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                          <img src="https://media1.tenor.com/images/4c88cacd67bc8c3a569802e67013af85/tenor.gif?itemid=11426291"></img>
+                        </div>
                       </div>
                     )}
                 </div>
@@ -65,7 +67,7 @@ class Info extends Component {
 }
 // Récupère le students dans la base de donnée 
 export default InfoContainer = withTracker(() => {
-  
+
   const user = Meteor.user();
   const students = Links.find().fetch()
 
