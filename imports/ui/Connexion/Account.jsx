@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import AccountLogic from './AccountLogic'
+import { Link } from 'react-router-dom';
 
 export default class Account extends Component {
     handleSubmit = (event) => {
@@ -14,6 +15,7 @@ export default class Account extends Component {
     render() {
         return (
             <Fragment>
+                <Link to='/info'>Liste des étudiants</Link>
                 <form>
                     <AccountLogic onChange={() => this.handleSubmit}/>
                 </form>

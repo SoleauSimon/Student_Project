@@ -11,10 +11,9 @@ class Profile extends Component {
 
 
     render() {
-        return(
-        
+        return(        
             <Fragment>
-                <a className="backHome" href="/">Revenir sur la home</a>
+                <a className="backHome" href="/info">Revenir sur la home</a>
                 <section>
                     <div className="mainBlock">
                         <div className="blockImg">
