@@ -11,7 +11,7 @@ class Profile extends Component {
         const { user } = this.props
         return (
             <Fragment>
-                <a className="backHome" href="/info">Revenir sur la home</a>
+                <a className="backHome" href="/info">Revenir sur la page des étudiants</a>
                 <section>
                     <div className="mainBlock">
                         <div className="blockImg">

@@ -22,7 +22,10 @@ class Info extends Component {
             <div className="infoContainerImg" style={{ flex: '1' }} >
             </div>
             <div style={{ flex: 1 }}>
-              <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Link style={{ borderRadius: '0% 60% 50% 49%', textTransform: 'uppercase', backgroundColor: '#cb4f4f', textDecoration: 'none', color: 'white', padding: '20px 20px 0px 0px' }} to='/'>
+                  <div style={{ marginLeft: 10, marginTop: 10 }} >Connexion</div>
+                </Link>
                 <Link style={{ borderRadius: '10% 0% 0% 70%', textTransform: 'uppercase', backgroundColor: '#cb4f4f', textDecoration: 'none', color: 'white', padding: '0 0 20px 20px' }} to="/profile">
                   <div style={{ marginBottom: 10, marginTop: 10, marginRight: 10 }}>Votre</div>
                   <div style={{ marginTop: 10, marginRight: 10 }}>Profile</div>
@@ -64,7 +67,6 @@ export default InfoContainer = withTracker(() => {
   const user = Meteor.user();
   const students = Links.find().fetch()
 
-  console.log(user)
   return {
     students,
     user
