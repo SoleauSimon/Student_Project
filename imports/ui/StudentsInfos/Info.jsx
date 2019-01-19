@@ -18,17 +18,20 @@ class Info extends Component {
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ display: 'flex' }}>
             <div className="infoContainerImg" style={{ flex: '1' }} >
-              {/* <img src="https://image.noelshack.com/fichiers/2019/03/5/1547823479-imgmanga.png" style={{  }} /> */}
+
             </div>
             <div style={{ flex: 1 }}>
               <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <Link to="/profile"> Profile </Link>
+                <Link style={{ borderRadius: '10% 0% 0% 70%', textTransform: 'uppercase', backgroundColor: '#cb4f4f', textDecoration: 'none', color: 'white', padding: '0 0 20px 20px' }} to="/profile"> 
+                  <div style={{ marginBottom: 10, marginTop: 10, marginRight: 10 }}>Votre</div>
+                  <div style={{ marginTop: 10, marginRight: 10 }}>Profile</div>
+                </Link>
               </div>
-              <div style={{ display: 'flex', padding: 60 }}>
+              <div style={{ display: 'flex', padding: '50px 60px 50px 60px' }}>
                 <div style={{ width: '100%' }}>
                   <Form />
                   <div >
-                    <ul style={{ overflow: 'scroll', maxHeight: '570px' }}>{students}</ul>
+                    <ul style={{ overflow: 'scroll', maxHeight: '600px' }}>{students}</ul>
                   </div>
                 </div>
               </div>

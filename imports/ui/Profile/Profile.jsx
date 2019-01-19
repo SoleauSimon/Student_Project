@@ -28,8 +28,8 @@ class Profile extends Component {
                                 <div className="YOUR_PROFILE">VOTRE PROFIL</div>
                             </div>
                             <div className="dataBlock">
-                                <h3 className="dataBlockTitle">{`Profile ${ this.isLogged() && this.props.user.username }` }</h3>
-                                <div className="dataBlockContent">lorem10</div>
+                                <h3 className="dataBlockTitle">Nom</h3>
+                                <div className="dataBlockContent">{`${ this.isLogged() && this.props.user.username }` }</div>
                                 <h3 className="dataBlockTitle">Prénom</h3>
                                 <div className="dataBlockContent">lorem10</div>
                                 <h3 className="dataBlockTitle">E-mail</h3>

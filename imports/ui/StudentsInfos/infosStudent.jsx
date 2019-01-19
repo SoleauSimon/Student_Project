@@ -32,7 +32,7 @@ class infosStudent extends Component {
     const { isUpdating } = this.state
 
     return (
-      <li style={{ backgroundColor: 'white', marginBottom: 40 }} key={student._id}>
+      <li style={{ backgroundColor: 'white', marginBottom: 20 }} key={student._id}>
         {isUpdating ? (
           <div style={{ display: 'flex' }}>
             <div>
@@ -48,8 +48,8 @@ class infosStudent extends Component {
         ) : (
             <div style={{ display: 'flex', padding: 20, justifyContent: 'space-between' }}>
               <div>
-                <div id="name" > {student.name}</div>
-                <div> {student.lastName} </div>
+                <div style={{ marginBottom: 5 }} id="name" > {student.name}</div>
+                <div style={{ marginBottom: 5 }}> {student.lastName} </div>
                 <a href={student.github} target="_blank">{student.github}</a>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column' }} >
