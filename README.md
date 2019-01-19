@@ -1,9 +1,13 @@
 Intervenants : 
 
 Christella Levieux
+
 Mehdi Verfaillie
+
 Anthony Thuillez
+
 Marie Te
+
 Simon Soléau
 
 ## Student_Project
