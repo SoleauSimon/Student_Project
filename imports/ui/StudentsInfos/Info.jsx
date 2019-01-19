@@ -18,7 +18,6 @@ class Info extends Component {
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ display: 'flex' }}>
             <div className="infoContainerImg" style={{ flex: '1' }} >
-
             </div>
             <div style={{ flex: 1 }}>
               <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
@@ -27,7 +26,7 @@ class Info extends Component {
                   <div style={{ marginTop: 10, marginRight: 10 }}>Profile</div>
                 </Link>
               </div>
-              <div style={{ display: 'flex', padding: '50px 60px 50px 60px' }}>
+              <div style={{ display: 'flex', padding: '40px 60px 40px 60px' }}>
                 <div style={{ width: '100%' }}>
                   <Form />
                   <div >

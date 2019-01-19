@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import { withTracker } from 'meteor/react-meteor-data';
 
 class infosStudent extends Component {
   state = {
@@ -28,8 +29,9 @@ class infosStudent extends Component {
   }
 
   render() {
-    const { student } = this.props
+    const { student, user } = this.props
     const { isUpdating } = this.state
+    console.log(user)
 
     return (
       <li style={{ backgroundColor: 'white', marginBottom: 20 }} key={student._id}>
@@ -63,4 +65,10 @@ class infosStudent extends Component {
   }
 }
 
-export default infosStudent
+export default infosStudentContainer = withTracker(() => {
+  const user = Meteor.user();
+  console.log(user)
+  return {
+    user,
+  };
+})(infosStudent);
