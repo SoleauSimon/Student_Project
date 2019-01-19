@@ -31,7 +31,6 @@ class infosStudent extends Component {
   render() {
     const { student, user } = this.props
     const { isUpdating } = this.state
-    console.log(user)
 
     return (
       <li style={{ backgroundColor: 'white', marginBottom: 20 }} key={student._id}>
@@ -67,7 +66,6 @@ class infosStudent extends Component {
 
 export default infosStudentContainer = withTracker(() => {
   const user = Meteor.user();
-  console.log(user)
   return {
     user,
   };

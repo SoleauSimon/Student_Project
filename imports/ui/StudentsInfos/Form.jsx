@@ -42,10 +42,7 @@ export default class Form extends Component {
         return (
             <Fragment>
                 <div>
-                    <div style={{ textAlign: 'center', marginBottom: 30 }}>
-                        <h1 style={{ fontSize: 53, letterSpacing: 11, textTransform: 'uppercase', lineHeight: 0.8, marginBottom: 10 }}>HETIC</h1>
-                        <h2 style={{ fontSize: 20, letterSpacing: 6, textTransform: 'uppercase' }}>La liste d'élèves</h2>
-                    </div>
+                    
                     <form style={{ marginBottom: 30, display: 'flex' }} onSubmit={this.handleSubmit}>
                         <div className="label">
                             {['Name', 'LastName', 'Github'].map(key => (

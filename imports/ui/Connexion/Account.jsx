@@ -15,10 +15,10 @@ export default class Account extends Component {
     render() {
         return (
             <Fragment>
-                <Link to='/info'>Liste des étudiants</Link>
                 <form>
                     <AccountLogic onChange={() => this.handleSubmit}/>
                 </form>
+                <Link to='/info'>Liste des étudiants</Link>
             </Fragment>
         )
     }
