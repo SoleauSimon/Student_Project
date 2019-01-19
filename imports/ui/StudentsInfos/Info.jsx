@@ -24,7 +24,7 @@ class Info extends Component {
             </div>
             <div style={{ flex: 1 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <div style={{ borderRadius: '0% 60% 50% 49%', textTransform: 'uppercase', backgroundColor: '#cb4f4f', textDecoration: 'none', color: 'white', padding: '20px 20px 0px 0px' }}>
+                <div style={{ borderRadius: '0% 8% 50% 15%', textTransform: 'uppercase', backgroundColor: '#cb4f4f', textDecoration: 'none', color: 'white', padding: '20px 20px 0px 0px' }}>
                   <AccountLogic />
                 </div>
                 <Link style={{ borderRadius: '10% 0% 0% 70%', textTransform: 'uppercase', backgroundColor: '#cb4f4f', textDecoration: 'none', color: 'white', padding: '0 0 20px 20px' }} to="/profile">
@@ -65,7 +65,7 @@ class Info extends Component {
 }
 // Récupère le students dans la base de donnée 
 export default InfoContainer = withTracker(() => {
-
+  
   const user = Meteor.user();
   const students = Links.find().fetch()
 

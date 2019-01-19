@@ -17,7 +17,7 @@ export default class AccountsUIWrapper extends Component {
   render() {
     return (
       <React.Fragment>
-        <span ref="container" />
+        <span style={{ marginLeft: 10 }} ref="container" />
       </React.Fragment>
     )
   }
