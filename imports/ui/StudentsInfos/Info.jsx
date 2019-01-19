@@ -13,15 +13,17 @@ class Info extends Component {
     );
     return (
       <Fragment>
-        <Link to="/profile"> Profile </Link>
-        <div style={{display:'flex', justifyContent:'space-between'}}>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <div>
-            <img src="https://image.noelshack.com/fichiers/2019/03/5/1547823479-imgmanga.png" style={{backgroundImage: 'cover', height:'100vh'}} />
+            <img src="https://image.noelshack.com/fichiers/2019/03/5/1547823479-imgmanga.png" style={{ backgroundImage: 'cover', height: '100vh' }} />
           </div>
+          <Form />
+
           <div className="contentstudents">
+            <Link to="/profile"> Profile </Link>
             <ul>{students}</ul>
           </div>
-        <div>
+        </div>
       </Fragment>
     );
   }
